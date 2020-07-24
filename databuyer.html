@@ -9,11 +9,11 @@
   color:#222;
   }
   input.f_{
-    border:1px solid #777;
-    font-size:14px;
-    color:#676767;
-    padding:5px 12px;
-    border-radius:5px;
+	padding: 5px;
+    font-size: 15px;
+    color: #555;
+    border: 1px solid #dedede;
+    border-radius: 4px;
     text-align:center;
   }
   #txtnama,#nohp,#txtinvoice{
@@ -37,8 +37,16 @@
   </p>
 </p>
 <p>
-<input class="f_" type="button" id="btn" value="Submit" name="btn" onClick="javascript: window.open('https://api.whatsapp.com/send?phone=6287739012900&text=' + 
-'Nama%20Lengkap%20:%20' +  document.getElementById('txtnama').value + ',' + '%0D%0A' + 
-'Nomor%20WhatsApp%20:%20' +  document.getElementById('nohp').value  + ',' + '%0D%0A' + 
-'Nomor%20Invoice%20:%20' + document.getElementById('txtinvoice').value);"/>
+<input class="f_" type="button" id="btn" value="Submit" name="btn" onClick="send_TOwa()"/>
 </p></div>
+
+<script>
+function send_TOwa(){
+	var str = document.getElementById('txtinvoice').value;
+	var ubahstr = str.replace(/#/g, '%23').replace(/-/g, '%2D');
+	window.open('https://api.whatsapp.com/send?phone=6287739012900&text=' + 
+	'Nama%20Lengkap%20:%20' +  document.getElementById('txtnama').value + ',' + '%0D%0A' + 
+	'Nomor%20WhatsApp%20:%20' +  document.getElementById('nohp').value  + ',' + '%0D%0A' + 
+	'Nomor%20Invoice%20:%20' + ubahstr);
+	}
+</script>
