@@ -1,0 +1,47 @@
+<amp-iframe frameborder='0' height='420' layout='responsive' placeholder='' sandbox='allow-scripts allow-same-origin allow-popups' src='https://klikdesainwebcom.github.io/rentalmobillampung/reservation_rentcar.html' title='Reservation Form order' width='240'></amp-iframe>
+
+<style>
+  span.flabel{
+  margin:0px;padding:0px;
+  text-align:left;
+  font-size:12px;
+  font-family:sans-serif;
+  text-align:center;
+  line-height:1.4;
+  color:#222;
+  }
+  input.f_{
+    border:1px solid #777;
+    font-size:14px;
+    color:#676767;
+    padding:5px 12px;
+    border-radius:5px;
+    text-align:center;
+  }
+  #txtnama,#,#txtinvoice{
+    margin-bottom:5px;
+  }
+  .form_submit{
+    text-align:center;
+  }
+  p{
+    margin:5px 0px;
+    padding:0px;
+  }
+</style>
+<div class="form_submit">
+<p><span class="fLabel">Nama  Sesuai KTP </span><br />
+  <input class="f_" type="text" id="txtnama" value="" name="txtnama"/></p>
+<p><span class="fLabel">Nomor HP</span><br />
+  <input class="f_" type="text" id="" value="" name=""/></p>
+<p><span class="fLabel">Nomor Invoice</span><br />
+  <input class="f_" type="text" id="txtinvoice" value="" name="txtinvoice"/>
+  </p>
+</p>
+<p>
+<input class="f_" type="button" id="btn" value="Submit" onClick="javascript: window.open('https://api.whatsapp.com/send?phone=6282286415141&text=' + 
+'Nama%20Lengkap%20:%20' +  document.getElementById('txtnama').value + ',' + '%0D%0A' + 
+'Nomor%20WhatsApp%20:%20' +  document.getElementById('').value  + ',' + '%0D%0A' + 
+'Lokasi%20Penjemputan%20:%20' + document.getElementById('txtinvoice').value;"/>
+</p></div>
+
