@@ -16,9 +16,10 @@
     border-radius: 4px;
     text-align:center;
   }
-  #txtnama,#nohp,#txtinvoice{
+  #txtnama,#nohp,#txtinvoice,#txtalamat{
     margin-bottom:5px;
   }
+  #txtalamat{width:24%;}
   .form_submit{
     text-align:center;
   }
@@ -28,18 +29,18 @@
   }
 </style>
 <div class="form_submit">
-<p><span class="fLabel">Nama Sesuai KTP </span><br />
+<p><span class="fLabel">Nama Lengkap Anda </span><br />
   <input class="f_" type="text" id="txtnama" value="" name="txtnama"/></p>
 <p><span class="fLabel">Nomor HP</span><br />
   <input class="f_" type="text" id="nohp" value="" name="nohp"/></p>
+<p><span class="fLabel">Alamat Lengkap</span><br />
+  <input class="f_" type="text" id="txtalamat" value="" name="txtalamat" width="60%"/></p>
 <p><span class="fLabel">Nomor Invoice</span><br />
-  <input class="f_" type="text" id="txtinvoice" value="" name="txtinvoice"/>
-  </p>
-</p>
+  <input class="f_" type="text" id="txtinvoice" value="" name="txtinvoice"/></p>
 <p>
 <input class="f_" type="button" id="btn" value="Submit" name="btn" onClick="send_TOwa()"/>
-</p></div>
-
+</p>
+</div>
 <script>
 function send_TOwa(){
 	var str = document.getElementById('txtinvoice').value;
@@ -47,6 +48,7 @@ function send_TOwa(){
 	window.open('https://api.whatsapp.com/send?phone=6287739012900&text=' + 
 	'Nama%20Lengkap%20:%20' +  document.getElementById('txtnama').value + ',' + '%0D%0A' + 
 	'Nomor%20WhatsApp%20:%20' +  document.getElementById('nohp').value  + ',' + '%0D%0A' + 
+	'Alamat%20Pembeli%20:%20' +  document.getElementById('txtalamat').value  + ',' + '%0D%0A' + 
 	'Nomor%20Invoice%20:%20' + ubahstr);
 	}
 </script>
